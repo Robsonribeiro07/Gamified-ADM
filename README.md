@@ -1,43 +1,124 @@
-# Next.js + Jest
+# Gamified
 
-This example shows how to configure Jest to work with Next.js.
+## Descrição
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript. This example also shows how to use Jest with the App Router and React Server Components.
+Gamified é uma plataforma open-source de gamificação voltada para a educação. O sistema permite que estudantes acumulem pontos ao longo do ano letivo, troquem por prendas configuráveis e promove a motivação no ambiente escolar. Também oferece a possibilidade de expansão com módulos adicionais para uma gestão escolar completa.
 
-> **Note:** Since tests can be co-located alongside other files inside the App Router, we have placed those tests in `app/` to demonstrate this behavior (which is different than `pages/`). You can still place all tests in `__tests__` if you prefer.
+## Objetivos
 
-## Deploy your own
+- **Motivar estudantes:** Estimular a participação ativa com a possibilidade de acumular pontos e conquistar prêmios.
+- **Configuração flexível:** Permitir que escolas configurem as regras do sistema conforme suas necessidades.
+- **Expansão modular:** Facilitar a integração de módulos para funções administrativas, como gestão financeira e acadêmica.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-jest&project-name=with-jest&repository-name=with-jest)
+## Funcionalidades Previstas
 
-## How to Use
+- Sistema de cadastro de estudantes com informações pessoais, incluindo e-mail e CPF.
+- Registro de movimentações de pontos por professores e funcionários (positivas e negativas).
+- Notificações automáticas por e-mail para estudantes sobre movimentações de pontos.
+- Painel de pontuação configurável.
+- Loja para conversão de pontos em prendas configuráveis.
+- Painel administrativo para configurações gerais.
+- Relatórios de desempenho.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Estrutura Inicial
 
-```bash
-npx create-next-app --example with-jest with-jest-app
+```
+Gamified/
+├── docs/                # Documentação do projeto
+├── src/                 # Código-fonte do projeto
+├── tests/               # Casos de teste
+└── README.md            # Documento inicial do projeto
 ```
 
-```bash
-yarn create next-app --example with-jest with-jest-app
+## Fluxo de Dados Revisado
+
+1. Um **professor ou funcionário da escola** registra ações do estudante no sistema, que podem resultar em pontuação positiva (participação, presença, boas ações) ou pontuação negativa (atrasos, faltas, má conduta).
+2. O backend processa a pontuação com a devida validação.
+3. O sistema envia uma **notificação ao estudante via e-mail**, informando a movimentação de pontuação.
+4. O estudante consulta seu saldo de pontos no frontend e pode acessar a **loja** para converter pontos em prêmios.
+
+## Modelo de Dados
+
+### **Estudantes**
+
+```json
+{
+  "id": 1,
+  "name": "João Silva",
+  "email": "joao.silva@email.com",
+  "cpf": "123.456.789-00",
+  "points": 1500,
+  "status": "Ativo"
+}
 ```
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
+### **Movimentações de Pontos**
+
+```json
+{
+  "id": 101,
+  "student_id": 1,
+  "type": "positivo",
+  "reason": "Participação em aula",
+  "points": 50,
+  "timestamp": "2025-02-07T12:00:00Z"
+}
 ```
 
-## Running Tests
+### **Prendas (Brindes)**
 
-```bash
-npm test
+```json
+{
+  "id": 1,
+  "name": "Chocolate",
+  "cost": 500,
+  "stock": 20
+}
 ```
 
-```bash
-yarn test
-```
+## Como Contribuir
 
-```bash
-pnpm test
-```
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Maldazzar/gamified.git
+   ```
+2. Crie uma branch para sua funcionalidade ou correção:
+   ```bash
+   git checkout -b minha-feature
+   ```
+3. Envie suas modificações:
+   ```bash
+   git commit -m "Adiciona nova funcionalidade"
+   git push origin minha-feature
+   ```
+4. Abra um Pull Request (PR).
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Regras de Contribuição
+
+- Escreva código limpo e bem documentado.
+- Teste suas alterações antes de submeter um PR.
+- Certifique-se de seguir o padrão de commits definido pela equipe.
+
+## Roadmap Inicial
+
+### **Março:**
+
+- Finalizar documentação inicial.
+- Primeira reunião com a equipe para definição do MVP.
+- Estruturação do repositório.
+
+### **Abril:**
+
+- Entrega do MVP com cadastro de alunos e sistema básico de pontuação.
+
+### **Maio:**
+
+- Adição do catálogo de prendas e painel administrativo.
+
+## Contato
+
+Se tiver dúvidas ou sugestões, entre em contato.
+
+---
+
+**Obs.:** Vamos ajustando conforme a equipe definir novas ideias e objetivos.
