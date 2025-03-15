@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "App Router",
+  title: "Gamified"
 };
 
 export default function Page() {
