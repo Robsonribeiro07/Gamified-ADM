@@ -1,3 +1,4 @@
+'use client'
 import {
   ChartNoAxesColumn,
   History,
@@ -6,6 +7,7 @@ import {
   User,
 } from 'lucide-react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const navItems = {
   Historic: {
@@ -36,9 +38,13 @@ interface NavProps {
 }
 export function Nav({ href, type }: NavProps) {
   const typeSelect = navItems[type]
+
+  const pathname = usePathname()
+
+  const isPageFocus = href === pathname ? 'bg-mint-300' : 'bg-blue-500'
   return (
     <Link
-      className="w-full  h-[10%] flex items-center justify-start px-5 bg-blue-500 rounded-lg gap-3 hover:bg-mint-300 transition-all duration-200  "
+      className={`w-full  h-[15%] flex items-center justify-start px-5 rounded-lg hover:bg-mint-300 transition-all duration-200 ${isPageFocus}  `}
       href={href}
     >
       {typeSelect.icon}

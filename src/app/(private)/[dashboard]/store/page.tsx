@@ -3,5 +3,5 @@ export const metadata = {
 }
 
 export default function Page() {
-  return <div className="w-full h-full bg-blue-500 rounded-lg"></div>
+  return <div className=" bg-blue-500 rounded-lg"></div>
 }
