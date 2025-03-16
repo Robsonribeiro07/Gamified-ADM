@@ -9,7 +9,6 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-blue-600 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        {/* Logo */}
         <div className="flex justify-center mb-6">
           <div className="bg-blue-500 rounded-full p-4">
             <Image
@@ -56,7 +55,7 @@ export default function NotFound() {
             <Button
               onClick={() => window.history.back()}
               variant="outline"
-              className="w-full border-blue-300 hover:bg-blue-400"
+              className="w-full border-blue-300  hover:bg-blue-400"
             >
               <ArrowLeft className="mr-2" size={16} />
               Voltar para a Página Anterior

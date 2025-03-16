@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Relatorios',
+  title: 'Loja',
 }
 
 export default function Page() {

@@ -6,10 +6,8 @@ import { Button } from '@/components/ui/button'
 
 export default function ErrorPage({
   error,
-  reset,
 }: {
   error?: Error & { digest?: string }
-  reset: () => void
 }) {
   const errorMessage = error?.message || 'Ocorreu um erro inesperado'
   const errorDigest = error?.digest
