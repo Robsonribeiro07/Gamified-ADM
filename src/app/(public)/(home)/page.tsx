@@ -1,7 +1,9 @@
+import { Header } from 'src/components/Header/header'
+
 export const metadata = {
-  title: "Gamified"
-};
+  title: 'Gamified',
+}
 
 export default function Page() {
-  return <h1 className="text-3xl text-mint-500">App Router</h1>;
+  return <div className="w-full h-full"></div>
 }
