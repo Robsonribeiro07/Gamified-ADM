@@ -1,5 +1,3 @@
-import { Header } from 'src/components/Header/header'
-
 export const metadata = {
   title: 'Gamified',
 }

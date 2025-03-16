@@ -1,10 +1,6 @@
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from '@/components/components/ui/avatar'
 import { Shield } from 'lucide-react'
 import { AdminCart } from './admin-cart'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 export function Header() {
   return (
     <header className="w-full p-3  h-24 bg-blue-500  rounded-lg items-center flex justify-between ">
