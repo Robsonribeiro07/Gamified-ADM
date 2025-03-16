@@ -15,10 +15,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-mint-500 w-full  h-screen ">
         {
-          <main className="w-full max-w-[1170px] mx-auto h-screen mt-5">
+          <main className="w-full max-w-[1300px] mx-auto h-screen mt-5">
             <Header />
 
-            <MainContent></MainContent>
+            <MainContent>{children}</MainContent>
           </main>
         }
       </body>

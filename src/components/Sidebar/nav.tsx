@@ -38,7 +38,7 @@ export function Nav({ href, type }: NavProps) {
   const typeSelect = navItems[type]
   return (
     <Link
-      className="w-[30%] h-[10%] flex items-center justify-start px-5 bg-blue-500 rounded-lg gap-3 hover:bg-mint-300 transition-all duration-200  "
+      className="w-full  h-[10%] flex items-center justify-start px-5 bg-blue-500 rounded-lg gap-3 hover:bg-mint-300 transition-all duration-200  "
       href={href}
     >
       {typeSelect.icon}
