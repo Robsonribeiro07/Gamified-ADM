@@ -3,7 +3,7 @@ import { Nav } from './nav'
 
 export function NavContent() {
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="h-full hidden  md:flex flex-col justify-between">
       <section className="flex flex-col gap-5 h-full ">
         <Nav href="/dashboard/history" type="Historic" />
         <Nav href="/dashboard/store" type="Store" />

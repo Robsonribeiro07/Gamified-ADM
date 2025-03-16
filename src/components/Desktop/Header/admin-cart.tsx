@@ -2,7 +2,7 @@ import { Star } from 'lucide-react'
 
 export function AdminCart() {
   return (
-    <div className="w-[11vw] h-[85%] bg-blue-600 rounded-lg items-cente text-white items-center  px-4 flex justify-between">
+    <div className="w-full 1xl:w-[11vw] h-[85%] bg-blue-600 rounded-lg items-cente text-white items-center  px-4 flex justify-between">
       <div className="flex flex-col">
         <h1>Prof Luis Paulo</h1>
         <h2 className="text-xs">Administrador #982345</h2>
